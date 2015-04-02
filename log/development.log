@@ -1,99 +1,52 @@
 
 
-Started GET "/" for ::1 at 2015-04-02 22:39:11 +0800
+Started GET "/" for ::1 at 2015-04-03 00:05:49 +0800
 Processing by Rails::WelcomeController#index as HTML
-  Rendered /Users/jimmyttsai/.rvm/gems/ruby-2.1.5/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
-Completed 200 OK in 102ms (Views: 77.0ms | ActiveRecord: 0.0ms)
-  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
-  [1m[35m (0.1ms)[0m  select sqlite_version(*)
-  [1m[36m (1.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  Rendered /Users/jimmyttsai/.rvm/gems/ruby-2.1.5/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 77ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (9.6ms)[0m  select sqlite_version(*)
+  [1m[36m (2.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
-Migrating to CreateTopics (20150402143930)
+Migrating to CreateTopics (20150402160611)
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.6ms)[0m  CREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
-  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150402143930"]]
-  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[35m (0.4ms)[0m  CREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150402160611"]]
+  [1m[35m (16.2ms)[0m  commit transaction
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 
 
-Started GET "/topics" for ::1 at 2015-04-02 22:39:45 +0800
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/topics" for ::1 at 2015-04-03 00:06:29 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by TopicsController#index as HTML
-  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"
-  Rendered topics/index.html.erb within layouts/application (4.0ms)
-Completed 200 OK in 2035ms (Views: 2019.1ms | ActiveRecord: 0.3ms)
+  [1m[35mTopic Load (10.0ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/index.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 2284ms (Views: 2238.3ms | ActiveRecord: 10.1ms)
 
 
-Started GET "/topics" for ::1 at 2015-04-02 22:39:56 +0800
-Processing by TopicsController#index as HTML
-  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
-  Rendered topics/index.html.erb within layouts/application (1.1ms)
-Completed 200 OK in 58ms (Views: 56.5ms | ActiveRecord: 0.2ms)
+Started GET "/assets/topics-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-03 00:06:34 +0800
 
 
-Started GET "/topics/new" for ::1 at 2015-04-02 22:39:57 +0800
+Started GET "/topics/new" for ::1 at 2015-04-03 00:06:37 +0800
 Processing by TopicsController#new as HTML
-  Rendered topics/_form.html.erb (127.8ms)
-  Rendered topics/new.html.erb within layouts/application (138.1ms)
-Completed 200 OK in 224ms (Views: 219.4ms | ActiveRecord: 0.2ms)
+  Rendered topics/_form.html.erb (202.0ms)
+  Rendered topics/new.html.erb within layouts/application (288.2ms)
+Completed 200 OK in 427ms (Views: 420.5ms | ActiveRecord: 0.3ms)
 
 
-Started POST "/topics" for ::1 at 2015-04-02 22:40:11 +0800
+Started POST "/topics" for ::1 at 2015-04-03 00:06:42 +0800
 Processing by TopicsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FM5FzkMuKRSNeuFXYcVdaSXeurtSjnECiTSmq8JlLEyksYo26Eym11J5TfTTN557femCthe67TTbb+Ay1yP1Tw==", "topic"=>{"title"=>"hey", "description"=>"hi"}, "commit"=>"Create Topic"}
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36mSQL (41.2ms)[0m  [1mINSERT INTO "topics" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "hey"], ["description", "hi"], ["created_at", "2015-04-02 14:40:11.337788"], ["updated_at", "2015-04-02 14:40:11.337788"]]
-  [1m[35m (2.5ms)[0m  commit transaction
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aIaYKm7XJmBmzfQLrlV9tHr1RHvBgBbwTRhRV0bF73vfXAMiKqd110xN3JLd3tQFQ0dnBnb20lAbWtb03dtaaQ==", "topic"=>{"title"=>"hey", "description"=>"hey\r\n"}, "commit"=>"Create Topic"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "topics" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "hey"], ["description", "hey\r\n"], ["created_at", "2015-04-02 16:06:42.944942"], ["updated_at", "2015-04-02 16:06:42.944942"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
 Redirected to http://localhost:3000/topics/1
-Completed 302 Found in 95ms (ActiveRecord: 43.8ms)
+Completed 302 Found in 27ms (ActiveRecord: 3.1ms)
 
 
-Started GET "/topics/1" for ::1 at 2015-04-02 22:40:11 +0800
+Started GET "/topics/1" for ::1 at 2015-04-03 00:06:42 +0800
 Processing by TopicsController#show as HTML
   Parameters: {"id"=>"1"}
-  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
-  Rendered topics/show.html.erb within layouts/application (1.2ms)
-Completed 200 OK in 121ms (Views: 60.0ms | ActiveRecord: 0.2ms)
-
-
-Started GET "/topics/new" for ::1 at 2015-04-02 22:40:16 +0800
-Processing by TopicsController#new as HTML
-  Rendered topics/_form.html.erb (3.2ms)
-  Rendered topics/new.html.erb within layouts/application (16.7ms)
-Completed 200 OK in 125ms (Views: 123.6ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/topics/1" for ::1 at 2015-04-02 22:40:18 +0800
-Processing by TopicsController#show as HTML
-  Parameters: {"id"=>"1"}
-  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
-  Rendered topics/show.html.erb within layouts/application (1.5ms)
-Completed 200 OK in 74ms (Views: 72.5ms | ActiveRecord: 0.2ms)
-
-
-Started GET "/topics" for ::1 at 2015-04-02 22:40:20 +0800
-Processing by TopicsController#index as HTML
-  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
-  Rendered topics/index.html.erb within layouts/application (1.8ms)
-Completed 200 OK in 51ms (Views: 50.7ms | ActiveRecord: 0.1ms)
-
-
-Started GET "/" for ::1 at 2015-04-02 22:40:54 +0800
-Processing by Rails::WelcomeController#index as HTML
-  Rendered /Users/jimmyttsai/.rvm/gems/ruby-2.1.5/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (0.8ms)
-Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for ::1 at 2015-04-02 22:42:31 +0800
-Processing by TopicsController#index as HTML
-  [1m[35mTopic Load (0.3ms)[0m  SELECT "topics".* FROM "topics"
-  Rendered topics/index.html.erb within layouts/application (5.1ms)
-Completed 200 OK in 57ms (Views: 53.9ms | ActiveRecord: 0.5ms)
-
-
-Started GET "/topics" for ::1 at 2015-04-02 22:52:45 +0800
-  [1m[36mActiveRecord::SchemaMigration Load (10.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-Processing by TopicsController#index as HTML
-  [1m[35mTopic Load (7.9ms)[0m  SELECT "topics".* FROM "topics"
-  Rendered topics/index.html.erb within layouts/application (16.9ms)
-Completed 200 OK in 390ms (Views: 334.3ms | ActiveRecord: 8.3ms)
+  [1m[35mTopic Load (0.3ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered topics/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 83ms (Views: 51.7ms | ActiveRecord: 0.3ms)
